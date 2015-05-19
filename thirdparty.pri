@@ -7,15 +7,15 @@ contains(MODULES, EIGEN){
     message( "Add thirdparty module: Eigen" )
 }
 
-contains(MODULES, QCUSTOMPLOT){
+contains(MODULES, qcustomplot){
     message( "Add thirdparty module: qcustomplot" )
     INCLUDEPATH += $$COSMOS/thirdparty/qcustomplot
     SOURCES     += $$COSMOS/thirdparty/qcustomplot/qcustomplot.cpp
     HEADERS     += $$COSMOS/thirdparty/qcustomplot/qcustomplot.h
 }
 
-contains(MODULES, TINYOBJLOADER){
-    message( "Add thirdparty module: TinyObjLoader" )
+contains(MODULES, tiny_obj_loader){
+    message( "Add thirdparty module: tiny_obj_loader" )
     INCLUDEPATH += $$COSMOS/thirdparty/tinyobjloader
     SOURCES     += $$COSMOS/thirdparty/tinyobjloader/tiny_obj_loader.cc
     HEADERS     += $$COSMOS/thirdparty/tinyobjloader/tiny_obj_loader.h
