@@ -1,50 +1,62 @@
-#message( "-----------------------------------------------------" )
+message("Thirdparty Modules >>")
 
-# include boost, Eigen3, ...
-INCLUDEPATH     += $$COSMOS/source/thirdparty
+# includepath for default libraries: boost, Eigen3, ...
+INCLUDEPATH     += $$COSMOS/thirdparty
 
-contains(MODULES, EIGEN){
-    message( "Add thirdparty module: Eigen" )
+contains(MODULES, Eigen){
+    message( "- Eigen" )
 }
 
 contains(MODULES, qcustomplot){
-    message( "Add thirdparty module: qcustomplot" )
-    INCLUDEPATH += $$COSMOS/source/thirdparty/qcustomplot
-    SOURCES     += $$COSMOS/source/thirdparty/qcustomplot/qcustomplot.cpp
-    HEADERS     += $$COSMOS/source/thirdparty/qcustomplot/qcustomplot.h
+    message( "- qcustomplot" )
+    INCLUDEPATH += $$COSMOS/thirdparty/qcustomplot
+    SOURCES     += $$COSMOS/thirdparty/qcustomplot/qcustomplot.cpp
+    HEADERS     += $$COSMOS/thirdparty/qcustomplot/qcustomplot.h
 }
 
 contains(MODULES, tiny_obj_loader){
-    message( "Add thirdparty module: tiny_obj_loader" )
-    INCLUDEPATH += $$COSMOS/source/thirdparty/tinyobjloader
-    SOURCES     += $$COSMOS/source/thirdparty/tinyobjloader/tiny_obj_loader.cc
-    HEADERS     += $$COSMOS/source/thirdparty/tinyobjloader/tiny_obj_loader.h
+    message( "- tiny_obj_loader" )
+    INCLUDEPATH += $$COSMOS/thirdparty/tinyobjloader
+    SOURCES     += $$COSMOS/thirdparty/tinyobjloader/tiny_obj_loader.cc
+    HEADERS     += $$COSMOS/thirdparty/tinyobjloader/tiny_obj_loader.h
 }
 
-contains(MODULES, VESTA){
-    message( "Add thirdparty module: Vesta" )
-    include( $$COSMOS/source/thirdparty/vesta.pri )
+contains(MODULES, vesta){
+    message( "- vesta" )
+    include( $$COSMOS/thirdparty/vesta.pri )
 }
 
-contains(MODULES, LIB3DS){
-    message( "Add thirdparty module: LIB3DS" )
-    include( $$COSMOS/source/thirdparty/lib3ds.pri )
+contains(MODULES, lib3ds){
+    message( "- lib3ds" )
+    include( $$COSMOS/thirdparty/lib3ds.pri )
 }
 
-contains(MODULES, GLEW){
-    message( "Add thirdparty module: GLEW" )
-    include( $$COSMOS/source/thirdparty/glew.pri )
+contains(MODULES, glew){
+    message( "- glew" )
+    include( $$COSMOS/thirdparty/glew.pri )
 }
 
-contains(MODULES, CURVEPLOT){
-    message( "Add thirdparty module: CURVEPLOT" )
-    include( $$COSMOS/source/thirdparty/curveplot.pri )
+contains(MODULES, glm){
+    message( "- glm" )
+    INCLUDEPATH += $$COSMOS/thirdparty/glm
+}
+
+contains(MODULES, curveplot){
+    message( "- curveplot" )
+    include( $$COSMOS/thirdparty/curveplot.pri )
+}
+
+contains(MODULES, jsoncpp){
+    message( "- jsoncpp" )
+    INCLUDEPATH += $$COSMOS/thirdparty/jsoncpp
+    SOURCES     += $$COSMOS/thirdparty/jsoncpp/jsoncpp.cpp
+    HEADERS     += $$COSMOS/thirdparty/jsoncpp/json/json.h
 }
 
 
 contains(MODULES, POCO){
-    message( "Add thirdparty module: POCO" )
-#    INCLUDEPATH += $$COSMOS/source/thirdparty/
-#    SOURCES     += $$COSMOS/source/thirdparty/tinyobjloader/tiny_obj_loader.cc
-#    HEADERS     += $$COSMOS/source/thirdparty/tinyobjloader/tiny_obj_loader.h
+    message( "- POCO" )
+#    INCLUDEPATH += $$COSMOS/thirdparty/
+#    SOURCES     += $$COSMOS/thirdparty/tinyobjloader/tiny_obj_loader.cc
+#    HEADERS     += $$COSMOS/thirdparty/tinyobjloader/tiny_obj_loader.h
 }
