@@ -1,8 +1,5 @@
 boost/
-Eigen/
-glm/
 poco/
-qcustomplot/
 tinyobjloader/
 curveplot/
 glew/
@@ -12,5 +9,4 @@ vesta/
 
 qwt/
 arm/
-jsoncpp/
 serial/
