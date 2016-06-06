@@ -1,12 +1,12 @@
 import qbs
 
-Product  { 
+Product  { // could be DynamicLibrary but at this point loading a dll does not seem to work well
     type: "staticlibrary"
-    name: "boost"
+    name: "tinyobjloader"
 
     files: [
-        "boost/*.cpp",
-        "boost/*.h",
+        "tiny_obj_loader.cpp",
+        "tiny_obj_loader.h",
     ]
 
     Depends { name: "cpp" }
@@ -15,12 +15,11 @@ Product  {
 
     Export {
         Depends { name: "cpp" }
-        cpp.includePaths: ["../"]
+        cpp.includePaths: ["./"]
     }
 
     cpp.includePaths : [
         '.',
-        '../',
     ]
 
 
