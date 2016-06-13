@@ -11,3 +11,4 @@ qwt/
 arm/
 serial/
 build-*
+*.user
