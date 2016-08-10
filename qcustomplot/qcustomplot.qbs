@@ -9,7 +9,7 @@ Product  { // could be DynamicLibrary but at this point loading a dll does not s
         "*.h",
     ]
 
-    Depends { name: "glm" }
+//    Depends { name: "glm" }
 
     Depends {
         name: "Qt";
@@ -17,6 +17,10 @@ Product  { // could be DynamicLibrary but at this point loading a dll does not s
     }
 
     Depends { name: "cpp" }
+    Properties {
+        condition: qbs.targetOS.contains("windows")
+        cpp.minimumWindowsVersion: "7.0"
+    }
     cpp.cxxLanguageVersion : "c++11"
     cpp.commonCompilerFlags : "-std=c++11"
 
