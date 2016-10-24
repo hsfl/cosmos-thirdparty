@@ -1,4 +1,4 @@
-import qbs
+//import qbs
 
 Product  { // could be DynamicLibrary but at this point loading a dll does not seem to work well
     type: "staticlibrary"
