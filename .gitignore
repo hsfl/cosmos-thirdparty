@@ -12,3 +12,11 @@ arm/
 serial/
 build-*
 *.user
+
+Eigen/
+
+glm/
+
+jsoncpp/
+
+rs232/
