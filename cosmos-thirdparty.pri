@@ -17,7 +17,7 @@ contains(MODULES, qcustomplot){
 contains(MODULES, tiny_obj_loader){
     message( "- tiny_obj_loader" )
     INCLUDEPATH += $$COSMOS_SOURCE/thirdparty/tinyobjloader
-    SOURCES     += $$COSMOS_SOURCE/thirdparty/tinyobjloader/tiny_obj_loader.cc
+    SOURCES     += $$COSMOS_SOURCE/thirdparty/tinyobjloader/tiny_obj_loader.cpp
     HEADERS     += $$COSMOS_SOURCE/thirdparty/tinyobjloader/tiny_obj_loader.h
 }
 
